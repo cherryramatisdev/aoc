@@ -18,7 +18,7 @@
            (#\( (find-paren-index (+ acc 1) (+ index 1) list)))))
 
 (defun solve-part-2 ()
-  (let* ((file-content (uiop:read-file-string "input.txt"))
+  (let* ((file-content (uiop:read-file-string "day1/input.txt"))
          (trim-content (string-trim '(#\Newline #\space) file-content)))
     (car (find-paren-index 0 0 (coerce trim-content 'list)))))
 
